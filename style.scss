@@ -16,6 +16,7 @@ body{
 
 .entry{
     text-align: center;
+    visibility: visible;
 }
 
 #btn-enter{
@@ -40,4 +41,8 @@ body{
 
 button:focus{
     outline: 0;
+}
+
+.game {
+    visibility: hidden;
 }
