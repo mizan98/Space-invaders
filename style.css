@@ -3,21 +3,28 @@
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', cursive;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-color: black;
+  background-color: white;
+  color: white;
 }
 
 .entry {
   text-align: center;
-  visibility: visible;
+  padding-top: 300px;
+}
+
+h1 {
+  padding-bottom: 50px;
 }
 
 #btn-enter {
   border: none;
   background: #404040;
-  color: bisque !important;
+  color: white !important;
   font-weight: 500;
   padding: 20px;
   text-transform: uppercase;
@@ -40,7 +47,7 @@ button:focus {
   outline: 0;
 }
 
-.game {
-  visibility: hidden;
+.sprite {
+  background-image: url("giphy(1).gif");
 }
 /*# sourceMappingURL=style.css.map */
