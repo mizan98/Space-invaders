@@ -16,11 +16,11 @@ body{
     color: $colorB;
 }
 
-.entry{
-    text-align: center;
-    // background-image: url("giphy(1).gif");
-    padding-top: 300px;
-}
+// .entry{
+//     text-align: center;
+//     // background-image: url("giphy(1).gif");
+//     padding-top: 300px;
+// }
 
 h1{
     padding-bottom: 50px;
@@ -50,6 +50,31 @@ button:focus{
     outline: 0;
 }
 
-.sprite{
-    background-image: url("giphy(1).gif");
+.images{
+    #alien, #player {
+        width: 50px;
+        height: 50px;
+    }
 }
+
+   .images{
+       #player{
+        display: block;
+        margin-left: 50%;
+        margin-right: 50%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+
+       }
+   }
+
+   .game {
+       .score, .level, .lives{    
+           color: $colorA;
+           margin-top: 50px;
+       }
+
+   }
+
+   
