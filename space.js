@@ -23,5 +23,22 @@
 //     }
 // })
 
+let canvas = document.getElementById("canvas")
+let ctx = canvas.getContext("2d")
+let enemies = new Image()
 
+class Alien {
+    constructor() {
+        this.image = enemies;
+        this.hit = false;
+    }
+}
 
+enemies.src = "giphy(1).gif"
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+enemies.onload = function () {
+ctx.drawImage(enemies, 100, 100)
+ctx.stroke()
+};

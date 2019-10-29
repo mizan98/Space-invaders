@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+canvas {
+  background: black;
+}
+
 h1 {
   padding-bottom: 50px;
 }
