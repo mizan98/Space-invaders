@@ -1,44 +1,16 @@
-// let entry = document.getElementsByClassName("entry")
-// let game = document.getElementsByClassName("game")
-// let button = document.getElementById("btn-enter")
-// entry.hidden = false;
-// game.hidden = true;
+let player = document.getElementById("player")
+let left = 0;
+let right = 0;
 
-// // document.getElementById("btn-enter")
-// // // let canvas = document.getElementById("game-start")
-// // .addEventListener ("click", function() {
-// //     entry.hidden = true;
-// //     game.hidden = false;
-// // }, false);
-
-
-// // let display = canvas.getContext("2d")
-
-// entry.addEvenListener("click",() => {
-//     if(entry.style.display == "none"){
-//         entry.style.display = "block"
-//     }
-//     else{
-//         entry.style.display = "none"
-//     }
-// })
-
-let canvas = document.getElementById("canvas")
-let ctx = canvas.getContext("2d")
-let enemies = new Image()
-
-class Alien {
-    constructor() {
-        this.image = enemies;
-        this.hit = false;
+let move = (event) => {
+    if (event.keyCode == 37) {
+        left -= 10
+        player.style.left = (parseInt(left) + left) + "px";
+    }
+    if (event.keyCode == 39) {
+        left += 10
+        player.style.left = (parseInt(left) + left) + "px";
     }
 }
 
-enemies.src = "giphy(1).gif"
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-
-enemies.onload = function () {
-ctx.drawImage(enemies, 100, 100)
-ctx.stroke()
-};
+document.onkeydown = move
