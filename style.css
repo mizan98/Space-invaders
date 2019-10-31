@@ -8,13 +8,86 @@
 }
 
 body {
-  background-color: black;
-  color: black;
+  background-image: url("image/backg.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  padding-bottom: 50px;
+}
+
+#btn-enter {
+  border: none;
+  background: #404040;
+  color: white !important;
+  font-weight: 500;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  top: 0px;
+}
+
+#btn-enter:hover {
+  color: #bb0000 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#btn-retry {
+  border: none;
+  background: #404040;
+  color: white !important;
+  font-weight: 500;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#btn-retry:hover {
+  color: #bb0000 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button:focus {
+  outline: 0;
 }
 
 .images #alien, .images #player {
   width: 50px;
   height: 50px;
-  position: relative;
+}
+
+.images #player {
+  display: block;
+  margin-left: 50%;
+  margin-right: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.game .score, .game .level, .game .lives {
+  color: white;
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */
