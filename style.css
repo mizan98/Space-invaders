@@ -87,8 +87,13 @@ button:focus {
   margin-left: 49%;
   margin-right: 50%;
   text-align: center;
-  position: fixed;
+  position: inherit;
   bottom: 0;
+}
+
+#missile {
+  height: 50px;
+  width: 50px;
 }
 
 .game {
@@ -96,10 +101,5 @@ button:focus {
   margin-left: 25%;
   margin-right: 25%;
   height: 100vh;
-}
-
-.game .score, .game .level, .game .lives {
-  color: white;
-  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */
