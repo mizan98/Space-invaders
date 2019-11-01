@@ -1,32 +1,42 @@
 // loads in images and variables
-
-let player = document.getElementById("player")
 let alien = document.getElementById("alien")
 let alienArray = [];
-let left = 0;
-let right = 0;
+
 
 // Checks keycode and which movements are being made
-
-let move = (event) => {
-    if (event.keyCode == 37) {
-        left -= 10
-    }
-    else if (event.keyCode == 39) {
-        left += 10
-    }
-    else if (event.keyCode == 32) {
-        console.log("Fire")
-    }
-    player.style.left = (parseInt(left) + left) + "px";
+let hero = {
+    left: 5
 }
 
-document.onkeydown = move
+let missiles = []
 
-// for (rows = 0; rows < 7; rows++) {
-//     for (columns = 0; columns < 5; columns ++) {
-//         alien.drawImage(alien)
-//         // alienArray[i][j] = new Image()
-//         // alienArray[i][j].src = ".image/giphy(1).gif"
-//     }
-// }
+document.onkeydown = function (e) {
+    if (e.keyCode === 37){
+         hero.left = hero.left - 10
+         console.log("left")
+         moveHero()
+    }
+    else if(e.keyCode === 39){
+        hero.left = hero.left + 10
+        moveHero()
+    }
+    else if(e.keyCode === 32){
+        missiles.push({
+            left: hero.left + 15
+        })
+    }
+}
+
+ 
+ function moveHero(){
+     document.getElementById("player").style.left = hero.left + "px"
+ }
+ moveHero()
+
+ function drawMissiles() {
+     document.getElementById("missile").innerHTML = ""
+     for(let missile = 0; missile < missiles.length; missile = missile + 1){
+        missiles(missile)
+     }
+ }
+

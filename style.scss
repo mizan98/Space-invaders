@@ -97,9 +97,14 @@ button:focus{
     margin-left: 49%;
     margin-right: 50%;
     text-align: center;
-    position: fixed;
+    position: inherit;
     bottom: 0;
 
+}
+
+#missile {
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -108,11 +113,5 @@ button:focus{
     margin-left: 25%;
     margin-right: 25%;
     height: 100vh;
-    .score, .level, .lives{    
-        color: $colorB;
-        margin-top: 50px;
-    }
-
 }
-
 
