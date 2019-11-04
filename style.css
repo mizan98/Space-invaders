@@ -1,105 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
 }
 
-body {
-  background-image: url("image/backg.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-h1 {
-  background-color: white;
-  color: black;
-  margin-left: 25%;
-  margin-right: 25%;
-  text-align: center;
-}
-
-#btn-enter {
-  border: none;
-  background: #404040;
-  color: white !important;
-  font-weight: 500;
-  padding: 20px;
-  text-transform: uppercase;
-  border-radius: 12px;
-  display: inline-block;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  top: 0px;
-}
-
-#btn-enter:hover {
-  color: #bb0000 !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  background: none;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-#btn-retry {
-  border: none;
-  background: #404040;
-  color: white !important;
-  font-weight: 500;
-  padding: 20px;
-  text-transform: uppercase;
-  border-radius: 12px;
-  display: inline-block;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-#btn-retry:hover {
-  color: #bb0000 !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  background: none;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-button:focus {
-  outline: 0;
-}
-
-#alien, #player {
-  width: 50px;
-  height: 50px;
-}
-
-#player {
-  display: block;
-  margin-left: 49%;
-  margin-right: 50%;
-  text-align: center;
+#background {
+  height: 800px;
+  width: 1280px;
   position: inherit;
-  bottom: 0;
 }
 
-#missile {
+#hero {
+  background-image: url("/image/player.png");
+  height: 50px;
+  width: 65px;
+  position: absolute;
+  top: 700px;
+  left: 550px;
+  background-size: cover;
+}
+
+.enemy {
+  background-image: url("/image/enemies.gif");
   height: 50px;
   width: 50px;
+  position: absolute;
+  top: 100px;
+  left: 550px;
+  background-size: cover;
 }
 
-.game {
-  background-color: black;
-  margin-left: 25%;
-  margin-right: 25%;
-  height: 100vh;
+#missle {
+  background-image: url("/image/missile1.png");
+  height: 25px;
+  width: 10px;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

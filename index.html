@@ -2,36 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Space Invaders</title>
     <link rel="stylesheet"href="style.css">
 
 </head>
 <body>
-    <div class="container">
-        <div class="entry">
-            <h1>SPACE INVADERS</h1>
-            <!-- <button id="btn-enter">Enter</button> -->
-        </div>
-        
-        <!-- <section>
-            <div class="stats">
-                <div class="score">score</div>  
-                <div class="level">level</div>
-                <div class="lives">live</div>
-            </div>
-        </section> -->
-
-        <div class="game">  
-            <div class="images">
-                <img id = "alien" src="image/enemies.gif">
-                <img id = "player" src="image/player.png">
-                <img id="missile" src="image/missile1.png">
-            </div>
-            <button id="btn-retry">Retry</button>
-        </div>
-        
+    <div id="background">
+        <div id="hero"></div>
+        <div class="enemy"></div>
+        <div id="missle"></div>
     </div>
 
     <script src="space.js"></script>

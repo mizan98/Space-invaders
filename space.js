@@ -1,14 +1,16 @@
-// loads in images and variables
-let alien = document.getElementById("alien")
-let alienArray = [];
+// // loads in images and variables
+// let alien = document.getElementById("alien")
+// let alienArray = [];
+// let missiles = []
 
+// // Checks keycode and which movements are being made
 
-// Checks keycode and which movements are being made
 let hero = {
-    left: 5
+    top: 700,
+    left: 550,
 }
 
-let missiles = []
+let missles = [];
 
 document.onkeydown = function (e) {
     if (e.keyCode === 37){
@@ -21,22 +23,33 @@ document.onkeydown = function (e) {
         moveHero()
     }
     else if(e.keyCode === 32){
+        console.log("fire!")
         missiles.push({
-            left: hero.left + 15
+            left: hero.left + 15,
+            right: hero.top
         })
+        console.log(missiles)
     }
 }
 
- 
  function moveHero(){
-     document.getElementById("player").style.left = hero.left + "px"
+    document.getElementById("hero").style.left = hero.left + "px"
  }
- moveHero()
 
  function drawMissiles() {
-     document.getElementById("missile").innerHTML = ""
-     for(let missile = 0; missile < missiles.length; missile = missile + 1){
-        missiles(missile)
-     }
+    document.getElementById("missiles").innerHTML = "";
+    for (let missile = 0; missile < missiles.length; missile ++) {
+        document.getElementById("missiles").innerHTML += `<div class = "missile" style = 'left: ${missile[missile].left}px; top: ${missiles[missile].top}px;'></div>`;
+    }
  }
+
+ moveHero()
+
+//  function drawMissiles() {
+//      document.getElementById("missile").innerHTML = ""
+//      for(let missile = 0; missile < missiles.length; missile = missile + 1){
+//         missiles(missile)
+//      }
+//  }
+
 
