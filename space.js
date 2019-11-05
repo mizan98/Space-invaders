@@ -97,20 +97,26 @@ function moveEnemies() {
 }
 
 
-// function hitAlien() {
-//     for (let enemy = 0; enemy < enemy.length; enemy++) {
-//         for (let missile = 0; missile < missiles.length; missile++) {
-//             if(missiles[missiles].top >= enemies[enemy].top + 50) {
-//                 console.log("hit")
-//             }
-//         }
-//     }
-// }
+function hitAlien() {
+    for (let enemy = 0; enemy < enemy.length; enemy++) {
+        for (let missile = 0; missile < missiles.length; missile++) {
+            if(
+                (missiles[missiles].top <= enemies[enemy].top + 50) &&
+                (missiles[missiles].top > enemies[enemy].top) &&
+                (missiles[missiles].left > enemies[enemy].left) &&
+                (missiles[missiles].left <= enemies[enemy].left + 50)
+                ){
+                enemies.splice(enemy, 1)
+                missiles.splice(missile, 1)
+            }
+        }
+    }
+}
 
 // The functions listed are looped a certain amount of times per second
 
 function game() {
-    setTimeout(game,200) 
+    setTimeout(game,150) 
     moveMissiles()
     drawMissiles()
     moveEnemies()
@@ -118,6 +124,5 @@ function game() {
     hitAlien()
 }
 game()
-// moveHero()
 
 //1:18:12
