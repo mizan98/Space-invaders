@@ -6,6 +6,7 @@
 }
 
 #background {
+  background-color: black;
   height: 800px;
   width: 1280px;
   position: inherit;
@@ -21,20 +22,18 @@
   background-size: cover;
 }
 
-.enemy {
+#enemies {
   background-image: url("/image/enemies.gif");
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 100px;
-  left: 550px;
   background-size: cover;
 }
 
-#missle {
+#missile {
   background-image: url("/image/missile1.png");
   height: 25px;
   width: 10px;
-  background-size: cover;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
